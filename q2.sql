@@ -3,3 +3,14 @@
 SELECT C.NAME
 FROM TRANSACTION T, CUSTOMER C
 WHERE LOYALTYCARDID = CUSTID and T.DAY = '13-JAN-2018';
+
+/* OUTPUT
+
+SQL> @q2.sql
+
+NAME
+--------------------
+Carlton
+Mark
+
+*/
