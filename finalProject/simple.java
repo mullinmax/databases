@@ -7,7 +7,7 @@
 import java.sql.*; 
 import java.io.*; 
 
-class simple { 
+class main { 
   public static void main (String args []) 
       throws SQLException, IOException { 
 
