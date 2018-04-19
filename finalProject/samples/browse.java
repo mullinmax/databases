@@ -17,7 +17,7 @@ public class browse {
     Connection conn = DriverManager.getConnection
                 ("jdbc:oracle:thin:@tinman.cs.gsu.edu:1521:sid9ir2",
                  user,pass);
-
+    System.out.println("Conneciton made");
     Statement stmt = conn.createStatement(
         ResultSet.TYPE_SCROLL_INSENSITIVE,
         ResultSet.CONCUR_READ_ONLY );
