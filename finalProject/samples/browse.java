@@ -12,8 +12,8 @@ public class browse {
       }
 
     String user, pass;
-    readEntry("userid  : ");
-    readEntry("password: ");
+    user = readEntry("userid  : ");
+    pass = readEntry("password: ");
     Connection conn = DriverManager.getConnection
                 ("jdbc:oracle:thin:@tinman.cs.gsu.edu:1521:sid9ir2",
                  user,pass);
