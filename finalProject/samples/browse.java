@@ -15,8 +15,8 @@ public class browse {
     user = readEntry("userid  : ");
     pass = readEntry("password: ");
     Connection conn = DriverManager.getConnection
-                ("jdbc:oracle:thin:@tinman.cs.gsu.edu:1521:sid9ir2",
-                 user,pass);
+       ("jdbc:oracle:thin:@deuce.cs.ohiou.edu:1521:class", user, pass);
+       
     System.out.println("Conneciton made");
     Statement stmt = conn.createStatement(
         ResultSet.TYPE_SCROLL_INSENSITIVE,
