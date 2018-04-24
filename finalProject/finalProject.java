@@ -36,7 +36,7 @@ class tacoStandDatabase {
     done = false;
     do {
       System.out.println("Welcome to the Taco Stand Database. Please select a task:");
-      System.out.println("Display warehouse inventory (1):");
+      System.out.println(" - Display warehouse inventory (1):");
       System.out.flush();
       ch = (char) System.in.read();
       ch1 = (char) System.in.read();
