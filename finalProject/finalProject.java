@@ -43,12 +43,6 @@ class tacoStandDatabase {
       switch (ch) {
         case '1' : warehouse.displayInventory(conn);
                    break;
-        case '2' : warehouse.add_course(conn);
-                   break;
-        case '3' : warehouse.add_students(conn);
-                   break;
-        case '4' : warehouse.select_course(conn);
-                   break;
         case 'q' : done = true;
                    break;
         default  : System.out.println("Type in option again");
@@ -72,6 +66,6 @@ class tacoStandDatabase {
        return buffer.toString().trim();
      } catch (IOException e) {
        return "";
-       }
+     }
    }
-} 
+}
