@@ -11,7 +11,7 @@ import java.io.*;
 class inventory { 
 
   void displayInventory(Connection conn) throws SQLException, IOException {
-    String query = "select * from INGREDIENT;";
+    String query = "select * from INGEEDIENT";
     Statement stmt = conn.createStatement(); 
     ResultSet rset = stmt.executeQuery(query);
     System.out.println("");
