@@ -15,9 +15,9 @@ class inventory {
     Statement stmt = conn.createStatement(); 
 //    ResultSet rset = stmt.executeQuery(query);
     System.out.println("");
-    while (rset.next ()) { 
+ //   while (rset.next ()) { 
       //System.out.println(rset.getString(1) + "   " + rset.getString(2) + "   " + rset.getString(3));
-    } 
+ //   } 
     System.out.println("");
   }
 
