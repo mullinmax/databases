@@ -116,7 +116,7 @@ class inventory {
     System.out.println("");
     String ls = readEntry("Select a course line number: ");
     
-    grade2 g2 = new grade2();
+//    grade2 g2 = new grade2();
     boolean done;
     char ch,ch1;
 

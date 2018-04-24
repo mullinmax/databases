@@ -8,7 +8,7 @@
 import java.io.*; 
 import java.sql.*;
 
-class gradebook { 
+class tacoStandDatabase { 
 
   public static void main (String args []) 
       throws SQLException, IOException { 
