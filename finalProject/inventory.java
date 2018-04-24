@@ -8,20 +8,20 @@
 import java.sql.*; 
 import java.io.*; 
 
-class grade1 { 
+class inventory { 
 
-  void print_menu() {
-    System.out.println("      GRADEBOOK PROGRAM\n");
-    System.out.println("(1) Add Catalog");
-    System.out.println("(2) Add Course");
-    System.out.println("(3) Add Students");
-    System.out.println("(4) Select Course");
-    System.out.println("(q) Quit\n");
+  void displayInventory(Connection conn) throws SQLException, IOException {
+    String query = "select * from INGREDIENT;";
+    Statement stmt = conn.createStatement(); 
+    ResultSet rset = stmt.executeQuery(query);
+    System.out.println("");
+    while (rset.next ()) { 
+      System.out.println(rset.getString(1) + "   " + rset.getString(2) + "   " + rset.getString(3));
+    } 
+    System.out.println("");
   }
 
-  void add_catalog(Connection conn) 
-    throws SQLException, IOException {
-         
+  void add_catalog(Connection conn) throws SQLException, IOException {
     Statement stmt = conn.createStatement(); 
 
     String cnum   = readEntry("Course Number: ");

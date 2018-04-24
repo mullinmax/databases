@@ -13,7 +13,7 @@ class gradebook {
   public static void main (String args []) 
       throws SQLException, IOException { 
 
-    grade1 g1 = new grade1();
+    inventory warehouse = new inventory();
     boolean done;
     char ch,ch1;
     byte num = 0;
@@ -35,19 +35,19 @@ class gradebook {
 
     done = false;
     do {
-      g1.print_menu();
-      System.out.print("Type in your option:");
+      System.out.print("Welcome to the Taco Stand Database. Please select a task:");
+      System.out.print("Display warehouse inventory (1):");
       System.out.flush();
       ch = (char) System.in.read();
       ch1 = (char) System.in.read();
       switch (ch) {
-        case '1' : g1.add_catalog(conn);
+        case '1' : warehouse.displayInventory(conn);
                    break;
-        case '2' : g1.add_course(conn);
+        case '2' : warehouse.add_course(conn);
                    break;
-        case '3' : g1.add_students(conn);
+        case '3' : warehouse.add_students(conn);
                    break;
-        case '4' : g1.select_course(conn);
+        case '4' : warehouse.select_course(conn);
                    break;
         case 'q' : done = true;
                    break;
