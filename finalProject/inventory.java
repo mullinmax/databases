@@ -27,8 +27,7 @@ class inventory {
 		Double price = new Double(rset.getString(2)).doubleValue();
 		Double servingsOnHand = new Double(rset.getString(3)).doubleValue();
 		servingsOnHand += new Double(numServings).doubleValue();
-		System.out.println("Query 1 completed");
-
+		
 		String query2 = "UPDATE INGREDIENT SET BULKPRICE = '"+Double.toString(price)+"', SERVINGSONHAND = '" +Double.toString(servingsOnHand)+ "' WHERE NAME = '" + ingredient + "'";
 		try{
 			stmt.executeUpdate(query2);

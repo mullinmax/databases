@@ -35,7 +35,7 @@ class tacoStandDatabase {
 			System.out.println(" [3] Send inventory to vendor");
 			System.out.println(" [4] Remove ingredient option");
 			System.out.println(" [5] Add new ingredient option");
-			System.out.println(" [6] Customer loyalty Report");
+			System.out.println(" [6] Customer spend Report");
 			System.out.println(" [7] Sales report");
 			System.out.println(" [Q] quit");
 			System.out.flush();
