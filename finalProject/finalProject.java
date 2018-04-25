@@ -71,7 +71,7 @@ class tacoStandDatabase {
 					office.commisions(conn);
 					break;
 				case '7':
-					String date = readEntry("What date would you like to see sales for? (DD-MM-YYYY)");
+					String date = readEntry("What date would you like to see sales for? (13-JAN-2018)");
 					office.sales(conn, date);
 					break;
 				case 'q' : done = true;

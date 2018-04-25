@@ -19,7 +19,7 @@ class admin {
 	}
 
 	void sales(Connection conn, String date) throws SQLException, IOException {
-		String query = "select * from TRANSACTION where DAY = '13-JAN-2018'";
+		String query = "select * from TRANSACTION where DAY = '" + date + "'";
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println("");
