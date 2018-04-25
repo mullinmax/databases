@@ -2,7 +2,7 @@ import java.sql.*;
 import java.io.*;
 
 class admin {
-	void payroll(Connection conn) throws SQLException, IOException {
+	void commisions(Connection conn) throws SQLException, IOException {
 		/*String query = "DELETE INGREDIENT WHERE NAME = '" + ingredient + "'";
 		try{
 			stmt.executeUpdate(query);
@@ -19,7 +19,7 @@ class admin {
 	}
 
 	void sales(Connection conn, String date) throws SQLException, IOException {
-		String query = "select * from TRANSACTION";
+		String query = "select * from TRANSACTION where DAY = '13-JAN-2018'";
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println("");

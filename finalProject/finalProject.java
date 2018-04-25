@@ -68,7 +68,7 @@ class tacoStandDatabase {
 					warehouse.addOption(conn, ingredient, price, quantity);
 					break;
 				case '6':
-					office.payroll(conn);
+					office.commisions(conn);
 					break;
 				case '7':
 					String date = readEntry("What date would you like to see sales for? (DD-MM-YYYY)");
