@@ -35,8 +35,8 @@ class tacoStandDatabase {
 			System.out.println(" [3] Send inventory to vendor");
 			System.out.println(" [4] Remove ingredient option");
 			System.out.println(" [5] Add new ingredient option");
-			System.out.println(" [6] Calculate payroll");
-			System.out.println(" [7] Show sales for a date");
+			System.out.println(" [6] Customer loyalty Report");
+			System.out.println(" [7] Sales report");
 			System.out.println(" [Q] quit");
 			System.out.flush();
 			ch = (char) System.in.read();
@@ -68,11 +68,10 @@ class tacoStandDatabase {
 					warehouse.addOption(conn, ingredient, price, quantity);
 					break;
 				case '6':
-					office.commisions(conn);
+					office.customerLoyalty(conn);
 					break;
 				case '7':
-					String date = readEntry("What date would you like to see sales for? (13-JAN-2018) ");
-					office.sales(conn, date);
+					office.salesReport(conn);
 					break;
 				case 'q' : done = true;
 					break;
