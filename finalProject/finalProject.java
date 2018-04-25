@@ -63,7 +63,7 @@ class tacoStandDatabase {
 					break;
 				case '5':
 					ingredient = readEntry("What ingredient would you like to add? ");
-					String price = readEntry("What is the bulk price of " + ingredient + " per serving? ");
+					String price = readEntry("What is the bulk price of " + ingredient + " per serving? $");
 					String quantity = readEntry("How many servings of " + ingredient + " are we starting with? ");
 					warehouse.addOption(conn, ingredient, price, quantity);
 					break;

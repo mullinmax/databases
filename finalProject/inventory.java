@@ -88,7 +88,8 @@ class inventory {
 	}
 
 	void addOption(Connection conn, String ingredient, String price, String quantity) throws SQLException, IOException {
-	/*	String query = "DELETE INGREDIENT WHERE NAME = '" + ingredient + "'";
+		String query = "INSERT INTO INGREDIENT VALUES ('" + ingredient + "', " + price + ", " + quantity + ")";
+		Statement stmt = conn.createStatement();
 		try{
 			stmt.executeUpdate(query);
 		}catch(SQLException e) {
@@ -99,7 +100,7 @@ class inventory {
 			}
 			return;
 		}
-		System.out.println("Ingredient removed");
-		stmt.close();*/
+		System.out.println("Ingredient added");
+		stmt.close();
 	}
 }
