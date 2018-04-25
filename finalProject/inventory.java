@@ -18,13 +18,14 @@ class inventory {
 
 	void receiveShipment(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
 		
-		String query1 = "select BULKPRICE SERVINGSONHAND from INGREDIENT where NAME = " + ingredient;
+		String query1 = "select * from INGREDIENT where NAME = " + ingredient;
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query1);
 
-		Double price = new Double(rset.getString(1)).doubleValue();
-		Double servingsOnHand = new Double(rset.getString(2)).doubleValue();
+		Double price = new Double(rset.getString(2)).doubleValue();
+		Double servingsOnHand = new Double(rset.getString(3)).doubleValue();
 		servingsOnHand += new Double(numServings).doubleValue();
+		System.out.println("Query 1 completed");
 
 		String query2 = "INSERT INTO INGREDIENT VALUES('" + ingredient + "', " + Double.toString(price) + ", " + Double.toString(servingsOnHand) + ")";
 		try{
