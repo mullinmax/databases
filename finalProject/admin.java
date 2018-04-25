@@ -3,7 +3,7 @@ import java.io.*;
 
 class admin {
 	void customerLoyalty(Connection conn) throws SQLException, IOException {
-		String query = "SELECT SUM(SALEPRICE), NAME FROM (SELECT * FROM TRANSACTION T, CUSTOMER C WHERE T.CUSTID = C.LOYALTYCARDID) GROUP BY SALEPRICE, NAME ORDER BY SALEPRICE";
+		String query = "SELECT AVG(SALEPRICE), NAME FROM (SELECT * FROM TRANSACTION T, CUSTOMER C WHERE T.CUSTID = C.LOYALTYCARDID) GROUP BY SALEPRICE, NAME ORDER BY SALEPRICE";
 
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
