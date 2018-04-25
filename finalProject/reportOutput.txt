@@ -1,0 +1,65 @@
+Script started on Wed Apr 25 13:22:30 2018
+bash-3.2$ java tacoStandDatabase.class 
+Exception in thread "main" java.lang.NoClassDefFoundError: tacoStandDatabase/class
+Caused by: java.lang.ClassNotFoundException: tacoStandDatabase.class
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+Could not find the main class: tacoStandDatabase.class.  Program will exit.
+bash-3.2$ java tacoStandDatabase.class        
+userid  : mmullin
+password: mm489466
+Welcome to the Taco Stand Database. Please select a task:
+ [1] Display warehouse inventory
+ [2] Receive shipment to inventory
+ [3] Send inventory to vendor
+ [4] Remove ingredient option
+ [5] Add new ingredient option
+ [6] Customer spend Report
+ [7] Sales report
+ [Q] quit
+6
+Average spent | Name
+4.3             Sam                 
+5               Amy                 
+5               Carlton             
+5.5             Sarah               
+6               Emma                
+6.5             Mark                
+7.15            Joe                 
+7.2             Brittney            
+
+Welcome to the Taco Stand Database. Please select a task:
+ [1] Display warehouse inventory
+ [2] Receive shipment to inventory
+ [3] Send inventory to vendor
+ [4] Remove ingredient option
+ [5] Add new ingredient option
+ [6] Customer spend Report
+ [7] Sales report
+ [Q] quit
+7
+Gross income | Ingredient cost |  Name  | Profit
+        6.5    .701              Byron    5.799               
+        5.5    .94               Matthew  4.56                
+        4.3    .351              Qing     3.949               
+        7.2    .941              Jake     6.259               
+       7.15    .851              Raj      6.299               
+          5    .681              Michael  4.319               
+          6    .991              Paul     5.009               
+          5    .811              Colleen  4.189               
+
+Welcome to the Taco Stand Database. Please select a task:
+ [1] Display warehouse inventory
+ [2] Receive shipment to inventory
+ [3] Send inventory to vendor
+ [4] Remove ingredient option
+ [5] Add new ingredient option
+ [6] Customer spend Report
+ [7] Sales report
+ [Q] quit
+q
+bash-3.2$ git add .
