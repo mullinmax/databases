@@ -10,7 +10,6 @@ class admin {
 		System.out.println("Total spent | Name");
 		while (rset.next()){
 			System.out.printf("%-14s", rset.getString(1));
-			System.out.print("   ");
 			System.out.printf("%-20s", rset.getString(2));
 			System.out.println("");
 		}
@@ -26,8 +25,8 @@ class admin {
 		while (rset.next()){
 			System.out.printf("%11s", rset.getString(1));
 			System.out.print("    ");
-			System.out.printf("%-20s", rset.getString(2));
-			System.out.printf("%-20s", rset.getString(3));
+			System.out.printf("%-18s", rset.getString(2));
+			System.out.printf("%-9s", rset.getString(3));
 			System.out.printf("%-20s", rset.getString(4));
 			System.out.println("");
 		}
