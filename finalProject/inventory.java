@@ -28,7 +28,7 @@ class inventory {
 		servingsOnHand += new Double(numServings).doubleValue();
 		System.out.println("Query 1 completed");
 
-		String query2 = "INSERT INTO INGREDIENT VALUES('" + ingredient + "', " + Double.toString(price) + ", " + Double.toString(servingsOnHand) + ")";
+		String query2 = "UPDATE INGREDIENT SET BULKPRICE = '"+Double.toString(price)+"', SERVINGSONHAND = '" +Double.toString(servingsOnHand)+ "WHERE NAME = '" + ingredient + "'";
 		try{
 			stmt.executeUpdate(query2);
 		}catch(SQLException e) {

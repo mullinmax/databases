@@ -50,7 +50,7 @@ class tacoStandDatabase {
 					warehouse.receiveShipment(conn, ingredient, numServings);
 					break;
 				case 'q' : done = true;
-									break;
+					break;
 				default	: System.out.println("Type in option again");
 			}
 		} while (!done);
