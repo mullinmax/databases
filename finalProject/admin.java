@@ -26,6 +26,7 @@ class admin {
 			System.out.printf("%-20s", rset.getString(1));
 			System.out.printf("%-20s", rset.getString(2));
 			System.out.printf("%-20s", rset.getString(3));
+			System.out.printf("%-20s", rset.getString(4));
 			System.out.println("");
 		}
 		System.out.println("");
