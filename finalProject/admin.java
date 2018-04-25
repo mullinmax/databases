@@ -9,7 +9,7 @@ class admin {
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println("Average spent | Name");
 		while (rset.next()){
-			System.out.printf("%-14s", rset.getString(1));
+			System.out.printf("%-16s", rset.getString(1));
 			System.out.printf("%-20s", rset.getString(2));
 			System.out.println("");
 		}
