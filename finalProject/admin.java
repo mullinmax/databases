@@ -19,7 +19,7 @@ class admin {
 	}
 
 	void sales(Connection conn, String date) throws SQLException, IOException {
-		String query = "select SUM(PRICE) from TRANSACTION where DAY = '" + date + "'";
+		String query = "select SUM(SALEPRICE) from TRANSACTION where DAY = '" + date + "'";
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println("");
