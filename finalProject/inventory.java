@@ -8,7 +8,10 @@ class inventory {
     ResultSet rset = stmt.executeQuery(query);
     System.out.println("");
     while (rset.next()){
-      System.out.println(rset.getString(1)+" "+rset.getString(2)+" "+rset.getString(3));
+      System.out.printf("%10d", rset.getString(1));
+      System.out.printf("%10d", rset.getString(2));
+      System.out.printf("%10d", rset.getString(3));
+      
     }
   }
 }
