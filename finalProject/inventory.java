@@ -42,4 +42,47 @@ class inventory {
 		System.out.println("Shipment received");
 		stmt.close();
 	}
+
+	void sendToVendor(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
+		
+		String query1 = "select * from INGREDIENT where NAME = '" + ingredient + "'";
+		Statement stmt = conn.createStatement();
+		ResultSet rset = stmt.executeQuery(query1);
+
+		rset.next();
+		Double price = new Double(rset.getString(2)).doubleValue();
+		Double servingsOnHand = new Double(rset.getString(3)).doubleValue();
+		servingsOnHand -= new Double(numServings).doubleValue();
+		System.out.println("Query 1 completed");
+
+		String query2 = "UPDATE INGREDIENT SET BULKPRICE = '"+Double.toString(price)+"', SERVINGSONHAND = '" +Double.toString(servingsOnHand)+ "' WHERE NAME = '" + ingredient + "'";
+		try{
+			stmt.executeUpdate(query2);
+		}catch(SQLException e) {
+			System.out.print("Statement Error:");
+			while(e != null) {
+				System.out.println(e.getMessage());
+				e = e.getNextException();
+			}
+			return;
+		}
+		System.out.println("Ingredient sent");
+		stmt.close();
+	}
+
+	void removeOption(Connection conn, String ingredient) throws SQLException, IOException {
+		String query = "DELETE INGREDIENT WHERE NAME = '" + ingredient + "'";
+		try{
+			stmt.executeUpdate(query);
+		}catch(SQLException e) {
+			System.out.print("Statement Error:");
+			while(e != null) {
+				System.out.println(e.getMessage());
+				e = e.getNextException();
+			}
+			return;
+		}
+		System.out.println("Ingredient removed");
+		stmt.close();
+	}
 }

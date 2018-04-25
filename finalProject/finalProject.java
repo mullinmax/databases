@@ -7,6 +7,7 @@ class tacoStandDatabase {
 			throws SQLException, IOException { 
 
 		inventory warehouse = new inventory();
+		admin office = new admin();
 		boolean done;
 		char ch,ch1;
 		byte num = 0;
@@ -31,7 +32,7 @@ class tacoStandDatabase {
 			System.out.println("Welcome to the Taco Stand Database. Please select a task:");
 			System.out.println(" [1] Display warehouse inventory");
 			System.out.println(" [2] Receive shipment to inventory");
-			System.out.println(" [3] Send inventory to vendors");
+			System.out.println(" [3] Send inventory to vendor");
 			System.out.println(" [4] Remove ingredient option");
 			System.out.println(" [5] Add new ingredient option");
 			System.out.println(" [6] Calculate payroll");
@@ -48,6 +49,28 @@ class tacoStandDatabase {
 					String ingredient = readEntry("What ingredient is being received? ");
 					String numServings = readEntry("how many servings of " + ingredient + "? ");
 					warehouse.receiveShipment(conn, ingredient, numServings);
+					break;
+				case '3':
+					String ingredient = readEntry("What ingredient is being sent? ");
+					String numServings = readEntry("how many servings of " + ingredient + "? ");
+					warehouse.sendToVendor(conn, ingredient, numServings);
+					break;
+				case '4':
+					String ingredient = readEntry("What ingredient would you like to remove? ");
+					warehouse.removeOption(conn, ingredient);
+					break;
+				case '5':
+					String ingredient = readEntry("What ingredient would you like to add? ");
+					String price = readEntry("What is the bulk price of " + ingredient + " per serving? ");
+					String quantity = readEntry("How many servings of " + ingredient + " are we starting with? ");
+					warehouse.removeOption(conn, ingredient, price, quantity);
+					break;
+				case '6':
+					office.payroll(conn);
+					break;
+				case '7':
+					String date = readEntry("What date would you like to see sales for? (DD-MM-YYYY)");
+					office.sales(conn, date);
 					break;
 				case 'q' : done = true;
 					break;
