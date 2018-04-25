@@ -40,7 +40,7 @@ class tacoStandDatabase {
         case '2' : 
           String ingredient = readEntry("What ingredient is being received?");
           String numServings = readEntry("how many servings of " + ingredient + "?");
-          warehouse.receiveShipment();
+          warehouse.receiveShipment(ingredient, numServings);
         case 'q' : done = true;
                    break;
         default  : System.out.println("Type in option again");
