@@ -16,7 +16,7 @@ class inventory {
     System.out.println("");
   }
 
-  void receiveShipment(String ingredient, String numServings){
+  void receiveShipment(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
     String query = "INSERT INTO INGREDIENT VALUES ('" + ingredient + "', 0.05, " + numServings + ");";
     Statement stmt = conn.createStatement(); 
     try {
