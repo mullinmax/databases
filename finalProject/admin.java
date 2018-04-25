@@ -7,7 +7,7 @@ class admin {
 
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
-		System.out.println("Total spent | Name");
+		System.out.println("Average spent | Name");
 		while (rset.next()){
 			System.out.printf("%-14s", rset.getString(1));
 			System.out.printf("%-20s", rset.getString(2));
