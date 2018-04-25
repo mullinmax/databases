@@ -30,6 +30,7 @@ class tacoStandDatabase {
 		do {
 			System.out.println("Welcome to the Taco Stand Database. Please select a task:");
 			System.out.println(" - Display warehouse inventory (1):");
+      System.out.println(" - Receive shipment to inventory (2):");
 			System.out.flush();
 			ch = (char) System.in.read();
 			ch1 = (char) System.in.read();
@@ -38,8 +39,8 @@ class tacoStandDatabase {
 					warehouse.displayInventory(conn);
 					break;
 				case '2' : 
-					String ingredient = readEntry("What ingredient is being received?");
-					String numServings = readEntry("how many servings of " + ingredient + "?");
+					String ingredient = readEntry("What ingredient is being received? ");
+					String numServings = readEntry("how many servings of " + ingredient + "? ");
 					warehouse.receiveShipment(conn, ingredient, numServings);
 				case 'q' : done = true;
 									break;
