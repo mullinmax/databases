@@ -55,7 +55,7 @@ class tacoStandDatabase {
 		try {
 			StringBuffer buffer = new StringBuffer();
 			System.out.print(prompt);
-			ystem.out.flush();
+			System.out.flush();
 			int c = System.in.read();
 			while(c != '\n' && c != -1) {
 				buffer.append((char)c);
