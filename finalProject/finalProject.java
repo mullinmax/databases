@@ -74,6 +74,7 @@ class tacoStandDatabase {
 					office.salesReport(conn);
 					break;
 				case 'q' : done = true;
+				case 'Q' : done = true;
 					break;
 				default	: System.out.println("Type in option again");
 			}
