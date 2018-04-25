@@ -18,7 +18,7 @@ class inventory {
 
 	void receiveShipment(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
 		
-		String query1 = "select * from INGREDIENT where NAME = " + ingredient;
+		String query1 = "select * from INGREDIENT where NAME = '" + ingredient + "'";
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query1);
 
