@@ -8,7 +8,7 @@ class inventory {
     ResultSet rset = stmt.executeQuery(query);
     System.out.println("");
     while (rset.next()){
-      System.out.printf("-%20s", rset.getString(1));
+      System.out.printf("%-20s", rset.getString(1));
       System.out.printf("%10s", rset.getString(2));
       System.out.printf("%10s", rset.getString(3));
       System.out.println("");
