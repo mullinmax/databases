@@ -41,29 +41,31 @@ class tacoStandDatabase {
 			System.out.flush();
 			ch = (char) System.in.read();
 			ch1 = (char) System.in.read();
+			String ingredient;
+			String numServings;
 			switch (ch) {
 				case '1' : 
 					warehouse.displayInventory(conn);
 					break;
 				case '2' : 
-					String ingredient = readEntry("What ingredient is being received? ");
-					String numServings = readEntry("how many servings of " + ingredient + "? ");
+					ingredient = readEntry("What ingredient is being received? ");
+					numServings = readEntry("how many servings of " + ingredient + "? ");
 					warehouse.receiveShipment(conn, ingredient, numServings);
 					break;
 				case '3':
-					String ingredient = readEntry("What ingredient is being sent? ");
-					String numServings = readEntry("how many servings of " + ingredient + "? ");
+					ingredient = readEntry("What ingredient is being sent? ");
+					numServings = readEntry("how many servings of " + ingredient + "? ");
 					warehouse.sendToVendor(conn, ingredient, numServings);
 					break;
 				case '4':
-					String ingredient = readEntry("What ingredient would you like to remove? ");
+					ingredient = readEntry("What ingredient would you like to remove? ");
 					warehouse.removeOption(conn, ingredient);
 					break;
 				case '5':
-					String ingredient = readEntry("What ingredient would you like to add? ");
+					ingredient = readEntry("What ingredient would you like to add? ");
 					String price = readEntry("What is the bulk price of " + ingredient + " per serving? ");
 					String quantity = readEntry("How many servings of " + ingredient + " are we starting with? ");
-					warehouse.removeOption(conn, ingredient, price, quantity);
+					warehouse.addOption(conn, ingredient, price, quantity);
 					break;
 				case '6':
 					office.payroll(conn);
