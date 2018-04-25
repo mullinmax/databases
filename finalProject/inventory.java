@@ -11,7 +11,8 @@ class inventory {
       System.out.printf("%10s", rset.getString(1));
       System.out.printf("%10s", rset.getString(2));
       System.out.printf("%10s", rset.getString(3));
-      
+      System.out.println("");
     }
+    System.out.println("");
   }
 }
