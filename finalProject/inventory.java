@@ -6,7 +6,7 @@ class inventory {
 		String query = "select * from INGREDIENT";
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
-		System.out.println("");
+		System.out.println(" Ingredient name | Price per serving | Servings on hand");
 		while (rset.next()){
 			System.out.printf("%-20s", rset.getString(1));
 			System.out.printf("%-6s", rset.getString(2));
