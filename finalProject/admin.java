@@ -9,7 +9,7 @@ class admin {
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println("Total spent | Name");
 		while (rset.next()){
-			System.out.printf("%-20s", rset.getString(1));
+			System.out.printf("%-15s", rset.getString(1));
 			System.out.printf("%-20s", rset.getString(2));
 			System.out.println("");
 		}
@@ -21,9 +21,9 @@ class admin {
 
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query);
-		System.out.println("Gross income | Ingredient cost | Name | Profit");
+		System.out.println("Gross income | Ingredient cost |  Name  | Profit");
 		while (rset.next()){
-			System.out.printf("%-20s", rset.getString(1));
+			System.out.printf("%15s", rset.getString(1));
 			System.out.printf("%-20s", rset.getString(2));
 			System.out.printf("%-20s", rset.getString(3));
 			System.out.printf("%-20s", rset.getString(4));

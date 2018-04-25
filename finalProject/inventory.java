@@ -8,8 +8,8 @@ class inventory {
 		ResultSet rset = stmt.executeQuery(query);
 		System.out.println(" Ingredient name | Price per serving | Servings on hand");
 		while (rset.next()){
-			System.out.printf("%-20s", rset.getString(1));
-			System.out.printf("%-6s", rset.getString(2));
+			System.out.printf("%20s", rset.getString(1));
+			System.out.printf("%-10s", rset.getString(2));
 			System.out.printf("%-6s", rset.getString(3));
 			System.out.println("");
 		}
