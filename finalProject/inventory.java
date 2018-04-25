@@ -26,7 +26,7 @@ class inventory {
 		Double servingsOnHand = new Double(rset.getString(2)).doubleValue();
 		servingsOnHand += new Double(numServings).doubleValue();
 
-		String query2 = "INSERT INTO INGREDIENT VALUES('" + ingredient + "', " + price + ", " + servingsOnHand + ")";
+		String query2 = "INSERT INTO INGREDIENT VALUES('" + ingredient + "', " + Double.toString(price) + ", " + Double.toString(servingsOnHand) + ")";
 		try{
 			stmt.executeUpdate(query2);
 		}catch(SQLException e) {
