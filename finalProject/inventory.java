@@ -9,10 +9,27 @@ class inventory {
     System.out.println("");
     while (rset.next()){
       System.out.printf("%-20s", rset.getString(1));
-      System.out.printf("%10s", rset.getString(2));
-      System.out.printf("%10s", rset.getString(3));
+      System.out.printf("%-6s", rset.getString(2));
+      System.out.printf("%-6s", rset.getString(3));
       System.out.println("");
     }
     System.out.println("");
+  }
+
+  void receiveShipment(String ingredient, String numServings){
+    String query = "INSERT INTO INGREDIENT VALUES ('" + ingredient + "', 0.05, " + numServings + ");";
+    Statement stmt = conn.createStatement(); 
+    try {
+      stmt.executeUpdate(query);
+    } catch (SQLException e) {
+        System.out.println("Ingredient was not added! Failure!");
+        while (e != null) {
+          System.out.println("Message     : " + e.getMessage());
+          e = e.getNextException();
+        }
+        return;
+    }
+    System.out.println("Shipment received");
+    stmt.close();
   }
 }
