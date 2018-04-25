@@ -1,10 +1,3 @@
-/****************************************************************/
-/* GradeBook Application Main class (Section 5.6)               */
-/* Needs grade1.java and grade2.java to be compiled             */
-/* Chapter 5; Oracle Programming -- A Primer                    */
-/*            by R. Sunderraman                                 */
-/****************************************************************/
-
 import java.io.*; 
 import java.sql.*;
 
