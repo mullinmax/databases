@@ -22,6 +22,7 @@ class inventory {
 		Statement stmt = conn.createStatement();
 		ResultSet rset = stmt.executeQuery(query1);
 
+		rset.next();
 		Double price = new Double(rset.getString(2)).doubleValue();
 		Double servingsOnHand = new Double(rset.getString(3)).doubleValue();
 		servingsOnHand += new Double(numServings).doubleValue();
