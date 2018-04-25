@@ -17,13 +17,13 @@ class inventory {
 	}
 
 	void receiveShipment(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
-		String query = "INSERT INTO INGREDIENT VALUES('Cheese', 0.05, 5);";
+		String query = "INSERT INTO INGREDIENT VALUES('Chesse', 0.05, 5);";
 		Statement stmt = conn.createStatement();
 		System.out.println("boop");
 		try{
 			stmt.executeUpdate(query);
 		}catch(SQLException e) {
-			System.out.print("Error:");
+			System.out.print("Statement Error:");
 			while(e != null) {
 				System.out.println(e.getMessage());
 				e = e.getNextException();
