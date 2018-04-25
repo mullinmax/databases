@@ -17,11 +17,18 @@ class inventory {
 	}
 
 	void receiveShipment(Connection conn, String ingredient, String numServings) throws SQLException, IOException {
-		String query = "INSERT INTO INGREDIENT VALUES('Chesse', 0.05, 5)";
+		
+		String query1 = "select BULKPRICE SERVINGSONHAND from INGREDIENT where NAME = " + ingredient;
 		Statement stmt = conn.createStatement();
-		System.out.println("boop");
+		ResultSet rset = stmt.executeQuery(query1);
+
+		Double price = new Double(rset.getString(1)).doubleValue();
+		Double servingsOnHand = new Double(rset.getString(2)).doubleValue();
+		servingsOnHand += new Double(numServings).doubleValue();
+
+		String query2 = "INSERT INTO INGREDIENT VALUES('" + ingredient + "', " + price + ", " + servingsOnHand + ")";
 		try{
-			stmt.executeUpdate(query);
+			stmt.executeUpdate(query2);
 		}catch(SQLException e) {
 			System.out.print("Statement Error:");
 			while(e != null) {

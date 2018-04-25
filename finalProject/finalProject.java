@@ -29,8 +29,14 @@ class tacoStandDatabase {
 		done = false;
 		do {
 			System.out.println("Welcome to the Taco Stand Database. Please select a task:");
-			System.out.println(" - Display warehouse inventory (1):");
-      System.out.println(" - Receive shipment to inventory (2):");
+			System.out.println(" [1] Display warehouse inventory");
+			System.out.println(" [2] Receive shipment to inventory");
+			System.out.println(" [3] Send inventory to vendors");
+			System.out.println(" [4] Remove ingredient option");
+			System.out.println(" [5] Add new ingredient option");
+			System.out.println(" [6] Calculate payroll");
+			System.out.println(" [7] Show sales for a date");
+			System.out.println(" [Q] quit");
 			System.out.flush();
 			ch = (char) System.in.read();
 			ch1 = (char) System.in.read();
@@ -42,6 +48,7 @@ class tacoStandDatabase {
 					String ingredient = readEntry("What ingredient is being received? ");
 					String numServings = readEntry("how many servings of " + ingredient + "? ");
 					warehouse.receiveShipment(conn, ingredient, numServings);
+					break;
 				case 'q' : done = true;
 									break;
 				default	: System.out.println("Type in option again");
